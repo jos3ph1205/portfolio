@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+      <link rel="stylesheet" href="main.css" />
+
+      <!-- ICONS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+      <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+   </head>
+   <body>
+      <nav class="nav" id="navbar">
+         <div class="nav-container">
+            <a data-cursor="pointer,big" href="#welcome-section">Home</a>
+            <a data-cursor="pointer,big" href="#experience-section">Skills</a>
+            <a data-cursor="pointer,big" href="#projects">Projects</a>
+            <a data-cursor="pointer,big" href="#contact-section">Contact</a>
+         </div>
+      </nav>
+      <div class="cursor"></div>
+      <div class="prj-info-view">
+         <div class="prj-info-container"></div>
+         <button data-cursor="pointer" class="more-info btn">
+            <i class="bx bx-arrow-back"></i>
+         </button>
+      </div>
+      <main>
+         <section id="welcome-section">
+            <div class="blob"></div>
+            <div class="blur"></div>
+            <div class="title-wrapper">
+               <h1 data-cursor="large,invert">Nice To Meet You!</h1>
+               <div class="typewriter">
+                  <div class="line">
+                     <div class="line-no">21</div>
+                     <div class="text tag">
+                        <span class="angle-brkt">&lt;</span>h3<span class="angle-brkt">&gt;</span>
+                     </div>
+                  </div>
+                  <div class="line">
+                     <div class="line-no">22</div>
+                     <!-- prettier-ignore -->
+                     <div class="text reg">
+                        I'm <span data-typewrite></span><div class="caret"></div>
+                     </div>
+                  </div>
+                  <div class="line">
+                     <div class="line-no">23</div>
+                     <div class="text tag">
+                        <span class="angle-brkt">&lt;/</span>h3<span class="angle-brkt">&gt;</span>
+                     </div>
+                  </div>
+                  <div class="doc-info">
+                     <abbr data-cursor="info" title="No Problems" class="problems">
+                        <div class="fail"><i class="fa-regular fa-circle-xmark"></i>0</div>
+                        <div class="danger"><i class="fa-solid fa-triangle-exclamation"></i>0</div>
+                     </abbr>
+
+                     <div class="type">
+                        <abbr data-cursor="info" title="Language Mode" popovertarget="html-po">HTML</abbr>
+
+                        <abbr data-cursor="info" title="Encoding">UTF-8</abbr>
+
+                        <div class="prettier">
+                           <i class="fa-solid fa-check"></i>
+                           <p>Prettier</p>
+                        </div>
+
+                        <abbr data-cursor="info" title="No New Notifications"><i class="fa-solid fa-bell"></i></abbr>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section id="experience-section">
+            <div class="experience-cont">
+               <h1 data-cursor="large,invert" class="hidden">My <span>Skills</span></h1>
+               <div class="code-cards-cont">
+                  <div data-cursor="big" class="code-card hidden">
+                     <img class="icon" src="images/lang-icons/html5.png" alt="" />
+                     <div class="info">
+                        <div class="name">
+                           <h2><span class="angle-brkt">&lt;</span>HTML<span class="angle-brkt">&gt;</span></h2>
+                           <h3>Structure</h3>
+                        </div>
+                        <div class="percent">
+                           <div class="bar"></div>
+                           <div class="value"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-cursor="big" class="code-card hidden">
+                     <img class="icon" src="images/lang-icons/css3.png" alt="" />
+                     <div class="info">
+                        <div class="name">
+                           <h2><span class="angle-brkt">.</span>CSS</h2>
+                           <h3>Style</h3>
+                        </div>
+                        <div class="percent">
+                           <div class="bar"></div>
+                           <div class="value"></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div data-cursor="big" class="code-card hidden">
+                     <img class="icon" src="images/lang-icons/js.png" alt="" />
+                     <div class="info">
+                        <div class="name">
+                           <h2>Javascript<span class="angle-brkt">()</span></h2>
+                           <h3>Functionality</h3>
+                        </div>
+                        <div class="percent">
+                           <div class="bar"></div>
+                           <div class="value"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="parallax">
+            <video autoplay muted loop>
+               <source src="videos/bg.mp4" type="video/mp4" />
+            </video>
+         </div>
+         <section id="projects">
+            <div data-cursor="large,invert" class="project-tile">
+               <h1>My <span>Projects</span></h1>
+            </div>
+            <div class="projects-grid">
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">Chadwick Boseman <span>Tribute Page</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/tribute-page.png" alt="" />
+                  </div>
+                  <button data-prj="projects/tribute-page.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">Little King <span>Product Page</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/little-king.png" alt="" />
+                  </div>
+                  <button data-prj="projects/little-king.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">Web Basics <span>Documentation</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/web-docs.png" alt="" />
+                  </div>
+                  <button data-prj="projects/web-docs.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">Workplace Satisfaction <span>Survey Form</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/survey.png" alt="" />
+                  </div>
+                  <button data-prj="projects/survey.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">Unit Calculator <span>First JS Project</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/unit-calculator.png" alt="" />
+                  </div>
+                  <button data-prj="projects/unit-calculator.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+               <div class="prj-card hidden">
+                  <div class="header hidden">
+                     <div class="title">About Me <span>First Project</span></div>
+                  </div>
+                  <div data-cursor="gray,large,move" class="thumbnail hidden">
+                     <img loading="lazy" src="images/site-thumbnails/about-me.png" alt="" />
+                  </div>
+                  <button data-prj="projects/about-me.html" data-cursor="pointer" class="more-info hidden">
+                     view project
+                  </button>
+               </div>
+            </div>
+         </section>
+         <div class="parallax">
+            <video autoplay muted loop>
+               <source src="videos/bg.mp4" type="video/mp4" />
+            </video>
+         </div>
+         <section id="contact-section">
+            <div class="contact-container">
+               <div class="contact-details hidden">
+                  <span class="bar"></span>
+                  <div class="about-me">
+                     <h3>About Me</h3>
+                     <div class="info">
+                        <div class="field">
+                           <p>
+                              Based in Malaysia, I'm a developer who strives to create fluent web apps engrossed in both
+                              front-end and back-end programming languages.
+                           </p>
+                        </div>
+                        <div class="field">
+                           <div>Name:</div>
+                           <p>Sharvin Joseph</p>
+                        </div>
+                        <div class="field">
+                           <div>Age:</div>
+                           <p><span id="age"></span> Years</p>
+                        </div>
+                        <div class="field">
+                           <div>Experience:</div>
+                           <p><span id="experience"></span> Months</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="location">
+                     <h3>Based In</h3>
+                     <span>Cheras, Selangor</span>
+                     <p>Malaysia</p>
+                  </div>
+                  <div class="email">
+                     <h3>Contact</h3>
+                     <p>sharvinjoseph.e@gmail.com</p>
+                  </div>
+               </div>
+               <div class="contact-form-container hidden">
+                  <div class="contact-info hidden">
+                     <h1 data-cursor="large,invert">Contact <span>Me</span></h1>
+                     <p>Happen to have any questions? Drop me an email and I'll respond as soon as possible</p>
+                  </div>
+                  <form class="contact-form" action="https://formsubmit.co/sharvinjoseph.e@gmail.com" method="POST">
+                     <div class="input-box hidden">
+                        <input class="input" type="text" name="name" id="name" placeholder="" required />
+                        <label for="name">Name</label>
+                        <span class="input-highlight"></span>
+                     </div>
+                     <div class="input-box hidden">
+                        <input class="input" type="email" name="email" id="email" placeholder="" required />
+                        <label for="email"
+                           >Email <span class="invalid"><i class="ri-error-warning-line"></i></span
+                        ></label>
+                        <span class="input-highlight"></span>
+                     </div>
+                     <div class="input-box hidden">
+                        <textarea
+                           class="input"
+                           name="message"
+                           id="message"
+                           placeholder=""
+                           rows="6"
+                           style="resize: vertical"
+                           required
+                        ></textarea>
+                        <label for="message">Message</label>
+                        <span class="input-highlight"></span>
+                     </div>
+                     <button data-cursor="pointer" class="submit" type="submit">SUBMIT</button>
+                  </form>
+               </div>
+            </div>
+         </section>
+         <footer>
+            <div class="links">
+               <a href="https://github.com/jos3ph1205" target="_blank" id="profile-link"
+                  ><i class="fa-brands fa-github"></i
+               ></a>
+               <a href="https://codepen.io/Joseph_1205" target="_blank"><i class="fa-brands fa-codepen"></i></a>
+               <a href="https://www.freecodecamp.org/jos3ph_1205" target="_blank"
+                  ><i class="fa-brands fa-free-code-camp"></i
+               ></a>
+            </div>
+            <div class="text">
+               <p>4 weeks of <strong>Work</strong></p>
+               <p>100% <strong>Brain-Power</strong></p>
+               <p>2024 ©, <strong>All Rights Reserved</strong></p>
+            </div>
+         </footer>
+      </main>
+   </body>
+   <script src="app.js" defer></script>
+</html>
