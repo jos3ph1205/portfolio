@@ -785,9 +785,6 @@ EXPERIENCE SECTION
    gap: 2rem;
    width: 100%;
 }
-.code-cards-cont:hover .code-card {
-   opacity: 0.4;
-}
 
 .code-card {
    --ease: 0.6s;
@@ -803,8 +800,11 @@ EXPERIENCE SECTION
    border-radius: 0.5rem;
    isolation: isolate;
    z-index: 0;
-
+   
    transition: 0.3s ease;
+}
+.code-cards-cont:hover .code-card {
+   opacity: 0.4;
 }
 /* CODE CARD SHARD */
 .code-card::before {
