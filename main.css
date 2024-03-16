@@ -1208,13 +1208,16 @@ CONTACT SECTION
    height: var(--underline-width);
    background-color: var(--clr-neutral);
 
-   transition: .2s ease;
+   transition: .4s ease;
    z-index: 1;
 }
 
 /* INPUT EVENTS */
 .contact-form .input-box .input:not(:placeholder-shown) {
    border-bottom-color: color-mix(in srgb, var(--clr-neutral), transparent 80%)
+}
+.contact-form .input-box .input:not(:placeholder-shown):invalid {
+   border-bottom-color: color-mix(in srgb, var(--clr-danger), transparent 60%)
 }
 
 /* INPUT HIGHLIGHT EVENTS */
