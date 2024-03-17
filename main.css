@@ -413,8 +413,8 @@ body:has(.prj-info-view.show) {
 
 .prj-info-view .more-info {
    position: fixed;
-   top: 2%;
-   left: 2%;
+   top: 20px;
+   left: 20px;
    color: white;
    padding: 0.3rem 0.4rem;
    background-color: hsla(0, 0%, 100%, 0.3);
@@ -456,8 +456,18 @@ body:has(.prj-info-view.show) {
    position: sticky;
    top: 0;
    text-align: center;
-   padding: 1.2rem;
-   background-color: var(--clr-base-900);
+   padding: 1rem 2rem;
+   background-color: color-mix(in srgb, var(--clr-base-900), transparent 15%);
+   backdrop-filter: blur(10px);
+   border-bottom: solid 2px hsla(0, 0%, 100%, .2);
+}
+.prj-info-container .header span {
+   font-size: .7em;
+   opacity: .3;
+}
+.prj-info-container .header p {
+   text-shadow: 0 0 10px currentColor;
+   animation: flash 10s ease-in-out infinite;
 }
 .prj-info-container .details {
    position: sticky;
@@ -535,12 +545,12 @@ PARALLAX
    position: relative;
 }
 .parallax > video {
-   --offset: 5;
+   --offset: 6;
    height: 100%;
    width: 120%;
    object-fit: cover;
    object-position: top;
-   filter: hue-rotate(30deg) brightness(0.5) saturate(2);
+   filter: hue-rotate(20deg) brightness(.6) saturate(1.5);
    position: relative;
 
    animation: parallaxY linear;
@@ -554,7 +564,7 @@ PARALLAX
 /*----------------------------------------------------------
 WELCOME SECTION
 ----------------------------------------------------------*/
-#welcome-section {
+#home {
    position: relative;
    z-index: 0;
    overflow: clip;
@@ -562,7 +572,7 @@ WELCOME SECTION
    border-bottom: solid 2px hsla(0, 0%, 50%, 0.2);
 }
 
-#welcome-section::before {
+#home::before {
    content: "";
    position: absolute;
    inset: 0;
@@ -626,7 +636,7 @@ WELCOME SECTION
    backdrop-filter: blur(12vmax);
 }
 
-#welcome-section:hover .blob {
+#home:hover .blob {
    opacity: 0.7;
    height: 100vh;
 }
@@ -767,7 +777,7 @@ WELCOME SECTION
 /*----------------------------------------------------------
 EXPERIENCE SECTION
 ----------------------------------------------------------*/
-#experience-section {
+#skills {
    isolation: isolate;
 }
 
@@ -1298,9 +1308,6 @@ footer .text {
    [data-cursor*="move"]:hover {
       cursor: move;
    }
-}
-
-@media only screen and (max-width: 770px) {
    .cursor {
       display: none;
    }
@@ -1310,6 +1317,9 @@ footer .text {
    .blur {
       display: none;
    }
+}
+
+@media only screen and (max-width: 770px) {
    section h1 {
       font-size: 2.2rem;
       margin-bottom: 2rem;
@@ -1353,11 +1363,12 @@ footer .text {
    }
    .prj-info-container .info .tags {
       font-size: .6rem;
-      padding: .1rem;
+      padding: 0rem;
+      margin-top: .25rem;
       gap: .3rem;
    }
    .prj-info-container .info .tag {
-      padding: .25rem;
+      padding: .2rem;
    }
    .prj-info-container .links {
       gap: .5rem;
