@@ -55,7 +55,6 @@ function experienceUpdate() {
    document.querySelector("#experience").innerHTML = months;
 }
 
-
 let birthday = new Date(2008, 11, 5);
 function ageUpdate() {
    const age = ((new Date() - birthday) / 1000 / 60 / 60 / 24 / 365).toPrecision(10);
@@ -211,8 +210,6 @@ observer.observe(siteInfoContainer, {
    childList: true,
 });
 
-
-
 /*----------------------------------------------------------
 HIDDEN ELEMENTS RE
 ----------------------------------------------------------*/
@@ -223,15 +220,15 @@ function scrollDirection() {
    let st = window.scrollY || document.documentElement.scrollTop;
 
    if (st > lastScrollTop) {
-      direction = 'down';
+      direction = "down";
    } else if (st < lastScrollTop) {
-      direction = 'up';
+      direction = "up";
    }
    lastScrollTop = st <= 0 ? 0 : st;
 }
-document.addEventListener('scroll', () => {
+document.addEventListener("scroll", () => {
    scrollDirection();
-})
+});
 
 const hiddenElements = document.querySelectorAll(".hidden");
 
