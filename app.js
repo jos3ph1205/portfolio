@@ -73,7 +73,7 @@ GLOWY ORB
 // MOUSE TRACKER
 const orb = document.querySelector(".blob");
 
-const blobSection = document.querySelector("#welcome-section");
+const blobSection = document.querySelector("#home");
 
 blobSection.onpointermove = (e) => {
    let x = e.clientX + window.scrollX;
