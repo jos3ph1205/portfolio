@@ -1001,6 +1001,15 @@ PROJECTS
 .prj-card .header span {
    color: color-mix(in srgb, var(--clr-base-300), var(--clr-base-500) 10%);
 }
+.prj-card .header span.new {
+   display: inline-block;
+   vertical-align: middle;
+   color: var(--clr-danger);
+   font-size: .7em;
+   background-color: color-mix(in srgb, var(--clr-danger), transparent 60%);
+   padding: .1em .5em .2em;
+   border-radius: .2em;
+}
 
 /* PROJECT CARD THUMBNAIL */
 .thumbnail {
