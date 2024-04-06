@@ -468,7 +468,12 @@ body:has(.prj-info-view.show) {
 }
 .prj-info-container .header p {
    text-shadow: 0 0 10px currentColor;
-   animation: flash 10s ease-in-out infinite;
+   animation: flash 3s ease-in-out infinite;
+}
+@keyframes flash {
+   50% {
+      opacity: 0;
+   }
 }
 .prj-info-container .details {
    position: sticky;
@@ -1022,7 +1027,7 @@ PROJECTS
    filter: drop-shadow(0 0 3px color-mix(in srgb, var(--clr-base-900), transparent 60%));
 }
 .thumbnail:hover > img {
-   scale: 2.5;
+   scale: 2;
 }
 
 /* PROJECT CARD MORE INFO */

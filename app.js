@@ -5,7 +5,7 @@ function sleep(ms) {
 /*----------------------------------------------------------
 TYPE WRITER EFFECT
 ----------------------------------------------------------*/
-const phrases = ["Joseph.", "a Developer.", "a Human."];
+const phrases = ["Sharvin Joseph.", "a Developer.", "a Human."];
 const el = document.querySelector("[data-typewrite]");
 const caret = document.querySelector(".caret");
 
@@ -149,7 +149,7 @@ const thumbnail = document.querySelectorAll(".thumbnail").forEach((thumb) => {
             {
                transform: `translate(${translateX}%, ${translateY}%)`,
             },
-            { duration: 500, fill: "forwards" }
+            { duration: 500, fill: "forwards", easing: "ease-out" }
          );
       }
    });
