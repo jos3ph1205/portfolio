@@ -568,7 +568,7 @@ PARALLAX
 }
 
 /*----------------------------------------------------------
-WELCOME SECTION
+HOME SECTION
 ----------------------------------------------------------*/
 #home {
    position: relative;
@@ -588,6 +588,59 @@ WELCOME SECTION
    background-position: center;
    filter: brightness(0.6);
    z-index: -1;
+}
+
+@keyframes fadeInUp {
+   from {
+      opacity: 0;
+      translate: 0 100%;
+   }
+   to {
+      opacity: 1;
+      translate: 0;
+   }
+}
+@keyframes arrow-float {
+   0% {
+      opacity: 0.1;
+   }
+   35% {
+      translate: 0 60%;
+      opacity: 1;
+   }
+   100% {
+      opacity: 0.1;
+   }
+}
+.scroll-arrow {
+   color: white;
+   font-size: 1.6rem;
+   display: flex;
+   flex-direction: column;
+   opacity: 0;
+   margin-top: 2rem;
+   animation: fadeInUp 1.5s ease 3.5s forwards;
+   text-shadow: 
+      0 0 5px hsla(0, 0%, 100%, 0.8),
+      0 0 15px hsla(0, 0%, 100%, 0.5),
+      0 0 35px hsla(0, 0%, 100%, 0.3)
+   ;
+   text-decoration: none;
+
+   i:nth-of-type(1) {
+      animation: arrow-float 4.5s ease 0s infinite;
+      opacity: 0;
+   }
+   i:nth-of-type(2) {
+      animation: arrow-float 4.5s ease 0.3s infinite;
+      opacity: 0;
+      margin-top: -0.8ch;
+   }
+   i:nth-of-type(3) {
+      animation: arrow-float 4.5s ease 0.6s infinite;
+      opacity: 0;
+      margin-top: -0.8ch;
+   }
 }
 
 /* GLOWY ORB THING ---------------------------------------*/
@@ -661,22 +714,13 @@ WELCOME SECTION
    display: flex;
    flex-direction: column;
    align-items: center;
+   gap: 1.5rem;
 }
 .title-wrapper > h1 {
    margin-bottom: 1.5rem;
 
    opacity: 0;
    animation: fadeInUp 2s ease 1.2s forwards;
-}
-@keyframes fadeInUp {
-   from {
-      opacity: 0;
-      translate: 0 100%;
-   }
-   to {
-      opacity: 1;
-      translate: 0;
-   }
 }
 
 .typewriter {
