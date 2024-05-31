@@ -718,6 +718,7 @@ HOME SECTION
 }
 .title-wrapper > h1 {
    margin-bottom: 1.5rem;
+   text-align: center;
 
    opacity: 0;
    animation: fadeInUp 2s ease 1.2s forwards;
