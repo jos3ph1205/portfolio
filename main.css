@@ -56,6 +56,7 @@ MANDATORY STYLING
    box-sizing: border-box;
    padding: 0;
    margin: 0;
+   -webkit-tap-highlight-color: transparent;
 }
 
 *:focus {
@@ -882,9 +883,6 @@ EXPERIENCE SECTION
    
    transition: 0.3s ease;
 }
-.code-cards-cont:hover .code-card {
-   opacity: 0.4;
-}
 /* CODE CARD SHARD */
 .code-card::before {
    content: "";
@@ -906,9 +904,25 @@ EXPERIENCE SECTION
    left: 50%;
    width: 40%;
 }
-.code-cards-cont:hover .code-card:hover {
+
+.code-card:hover + .code-card + .code-card {
    box-shadow: 0 0 15px hsl(230, 20%, 10%);
-   opacity: 1;
+   opacity: 0.1;
+}
+.code-card:hover + .code-card {
+   box-shadow: 0 0 15px hsl(230, 20%, 10%);
+   opacity: 0.6;
+}
+.code-card:hover {
+   box-shadow: 0 0 15px hsl(230, 20%, 10%);
+}
+.code-card:has(+ .code-card:hover) {
+   box-shadow: 0 0 15px hsl(230, 20%, 10%);
+   opacity: 0.6;
+}
+.code-card:has(+ .code-card + .code-card:hover) {
+   box-shadow: 0 0 15px hsl(230, 20%, 10%);
+   opacity: 0.1;
 }
 
 .code-card .icon {
@@ -987,29 +1001,29 @@ EXPERIENCE SECTION
    content: counter(num) "%";
 }
 
-.code-card:nth-child(1):hover .value {
+.code-card:nth-child(1):is(:hover, :focus-visible) .value {
    transition: --val var(--transition-in) 0.2s;
    --val: 90;
 }
-.code-card:nth-child(1):hover .bar {
+.code-card:nth-child(1):is(:hover, :focus-visible) .bar {
    transition: var(--transition-in);
    width: 90%;
 }
 
-.code-card:nth-child(2):hover .value {
+.code-card:nth-child(2):is(:hover, :focus-visible) .value {
    transition: --val var(--transition-in) 0.2s;
    --val: 85;
 }
-.code-card:nth-child(2):hover .bar {
+.code-card:nth-child(2):is(:hover, :focus-visible) .bar {
    transition: var(--transition-in);
    width: 85%;
 }
 
-.code-card:nth-child(3):hover .value {
+.code-card:nth-child(3):is(:hover, :focus-visible) .value {
    transition: --val var(--transition-in) 0.2s;
    --val: 55;
 }
-.code-card:nth-child(3):hover .bar {
+.code-card:nth-child(3):is(:hover, :focus-visible) .bar {
    transition: var(--transition-in);
    width: 55%;
 }
